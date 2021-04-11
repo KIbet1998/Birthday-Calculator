@@ -1,6 +1,7 @@
 function submitFunction(){
     checkDate();
-    // console.log(date);
+    checkMonth();
+    checkYear();
 
 
 }
@@ -25,24 +26,36 @@ function checkDate(){
         
     }
 
-    function checkDate(){
-        var date = document.getElementById("date").value;
-        console.log(date);
-        if (date) {
-            if (date>=1 && date<=31) {
-                return date;
+    function checkMonth(){
+        var month = document.getElementById("month").value;
+        console.log(month);
+        if (month) {
+            if (month>=1 && month<=12) {
+                return month;
             }
             else{
-                alert("date should be between 1-31");
+                alert("month should be between 1-12");
             }
         }else{
-            alert("enter a valid date")
+            alert("enter a valid month")
     
         }
+        }
+
+        function checkYear(){
+            var year = document.getElementById("year").value;
+            console.log(year);
+            if (year) {
+                if (year>=1000 && year<=9999) {
+                    return year;
+                }
+                else{
+                    alert("year should be between 1000-9999");
+                }
+            }else{
+                alert("enter a valid year")
         
-    
-            
-            
-        }
+            }
+            }
 
         
