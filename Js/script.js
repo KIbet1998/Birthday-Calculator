@@ -75,7 +75,17 @@ function checkDate(){
                 }
                 }
 
-                
+                function findDayOfWeek(day,month,year) {
+                    var DD = day;
+                    var MM = month;
+                    var YY = parseInt(String(year).slice(2,4));
+                    var cc = parseInt(String(year).slice(0,2));
+                    var DayOfWeek = Math.round(  ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
+                    var dayPerOrder = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    var orderOfDay = DayOfWeek-1;
+                    var nameOfDay = dayPerOrder[orderOfDay];
+                    return nameOfDay;
+                }
     
 
         
