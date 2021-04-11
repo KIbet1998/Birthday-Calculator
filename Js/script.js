@@ -4,7 +4,7 @@ function submitFunction(){
     var inputYear = checkYear();
     var inputGender = checkGender();
     var calculateDay = findDayOfWeek(inputDate,inputMonth,inputYear);
-    
+
 
 
 }
@@ -87,6 +87,31 @@ function checkDate(){
                     var orderOfDay = DayOfWeek-1;
                     var nameOfDay = dayPerOrder[orderOfDay];
                     return nameOfDay;
+                }
+
+                function determineName(gender,dayOfWeek){
+                    var dayGender= {
+                        male:{
+                            Sunday : 'Kwasi',
+                            Monday : 'Kwadwo',
+                            Tuesday : 'Kwabena',
+                            Wednesday : 'Kwaku',
+                            Thursday : 'Yaw',
+                            Friday : 'Kofi',
+                            Saturday : 'Kwame'
+                        },
+                        female:{
+                            Sunday : 'Akosua',
+                            Monday : 'Adwoa',
+                            Tuesday : 'Abenaa',
+                            Wednesday : 'Akua',
+                            Thursday : 'Yaa',
+                            Friday : 'Afua',
+                            Saturday : 'Ama'
+
+                        }
+                    }
+                    return dayGender[gender][dayOfWeek];
                 }
     
 
