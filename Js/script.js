@@ -2,6 +2,7 @@ function submitFunction(){
     checkDate();
     checkMonth();
     checkYear();
+    checkGender();
 
 
 }
@@ -57,5 +58,24 @@ function checkDate(){
         
             }
             }
+
+            function checkGender(){
+                var gender = document.getElementById("pickGender").value;
+                console.log(gender);
+                if (gender) {
+                    if (gender=="male" || gender=="female") {
+                        return gender;
+                    }
+                    else{
+                        alert("gender should be between male and female");
+                    }
+                }else{
+                    alert("enter a valid gender")
+            
+                }
+                }
+
+                
+    
 
         
