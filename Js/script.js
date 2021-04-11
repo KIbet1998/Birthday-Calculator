@@ -6,7 +6,7 @@ function submitFunction(){
     var calculateDay = findDayOfWeek(inputDate,inputMonth,inputYear);
     var contain = determineName(inputGender,calculateDay);
     alert("Your AKAN name is " + contain );
-
+console.log(inputDate,inputMonth,inputYear +"line 9");
 
 
 }
@@ -80,6 +80,7 @@ function checkDate(){
                     var MM = month;
                     var YY = parseInt(String(year).slice(2,4));
                     var CC = parseInt(String(year).slice(0,2));
+                    console.log(CC,YY,MM,DD + "line 83");
                     var DayOfWeek = Math.round( (  ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7);
                     var dayPerOrder = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
                     var orderOfDay = DayOfWeek-1;
