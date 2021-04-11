@@ -1,8 +1,10 @@
 function submitFunction(){
-    checkDate();
-    checkMonth();
-    checkYear();
-    checkGender();
+    var inputDate = checkDate();
+    var inputMonth = checkMonth();
+    var inputYear = checkYear();
+    var inputGender = checkGender();
+    var calculateDay = findDayOfWeek(inputDate,inputMonth,inputYear);
+    
 
 
 }
