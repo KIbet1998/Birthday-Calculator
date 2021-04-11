@@ -14,5 +14,14 @@
 
 .body{
     background-color: beige;
+    width: 1200px;
+}
+
+.P1{
+    text-align: center;
+}
+
+.Ol{
+    margin-left: 25%;
 }
 
